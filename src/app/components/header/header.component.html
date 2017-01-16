@@ -1,0 +1,9 @@
+<div class="brandHeader clearfix">
+  <div class="brandLogo">
+    <a routerLink="/featuredDeals"><img src="https://cartera-cdn.global.ssl.fastly.net/images/orgs/americanairlines/imgs/logo.jpg" alt="American Airlines AAdvantage eShopping"></a>
+  </div>
+  <div class="logInLink">
+    <a href="" *ngIf="!auth.isLoggedIn()" (click)="logIn()">Log in</a>
+    <a href="" *ngIf="auth.isLoggedIn()" (click)="logOut()">Log out</a>
+  </div>
+</div>

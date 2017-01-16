@@ -1,0 +1,65 @@
+.featuredDeals {
+  h2 {
+    margin: 15px;
+  }
+
+  .featuredDeal {
+    box-sizing: border-box;
+    padding: 0 1rem 1.75rem 1rem;
+    background-clip: content-box;
+    text-align: left;
+
+    a {
+      color: black;
+    }
+
+    .featuredDealContent {
+      display: block;
+      line-height: 1.5;
+      cursor: pointer;
+      padding: 2rem 0 0 0;
+      position: relative;
+      border: 1px solid darkgrey;
+      text-decoration: none;
+    }
+
+    .rebate {
+      background: #0078d2;
+      color: #fff;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      height: 6rem;
+      width: 12rem;
+      margin: 0 auto 1rem auto;
+    }
+
+    .desc {
+      padding: .75rem 1rem;
+      height: 96px;
+      overflow: hidden;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .featuredDeal {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .featuredDeal {
+      width: 100/3*1%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .featuredDeal {
+      width: 25%;
+    }
+  }
+}
+

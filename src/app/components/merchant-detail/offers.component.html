@@ -1,0 +1,14 @@
+<div class="offersWrap clearfix">
+  <div *ngFor="let o of offers" class="offer">
+    <div class="offerWrap">
+      <a href={{o.clickUrl}} target="_blank">
+        <div class="description">
+          {{o.description}}
+        </div>
+        <div class="expirationDate">
+          {{o.expires | expiration}}
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

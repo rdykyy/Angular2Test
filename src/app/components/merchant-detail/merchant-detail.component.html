@@ -1,0 +1,15 @@
+<div class="merchant">
+  <div class="merchantWrap clearfix">
+    <div class="merchantInfo">
+      <h2>{{merchant.name}}</h2>
+    </div>
+    <div  class="merchantLogo">
+      <img [src]=merchant.logoUrls._120x60 alt="">
+    </div>
+  </div>
+  <nav>
+    <a [routerLink]="['descriptions']">Description</a>
+    <a [routerLink]="['offers']">Offers</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

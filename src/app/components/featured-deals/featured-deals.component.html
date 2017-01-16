@@ -1,0 +1,30 @@
+<div class="featuredDeals">
+  <div class="featuredDealsWrap">
+
+    <div class="sectHead">
+      <h2>Featured Deals</h2>
+    </div>
+
+    <div class="sectCont">
+      <div class="featuredDealList">
+        <div *ngFor="let featuredDeal of featuredDeals" class="featuredDeal">
+          <a class="featuredDealContent" href="#" [routerLink]="['/merchant', featuredDeal.merchant.id]" title="Opens a dialog with offers and details for {{featuredDeal.merchant.name}}">
+            <img [src]="featuredDeal.merchant.logoUrls._120x60" alt="{{featuredDeal.merchant.name}}" class="logo">
+
+            <div class="rebate"></div>
+            <div class="details">
+              <p class="desc">
+                {{featuredDeal.assets.textTruncated}}
+              </p>
+            </div>
+            <div class="detailsFooter">
+              <div class="rebate" [rebate]="featuredDeal.merchant.rebate">
+                Earn {{featuredDeal.merchant.rebate.value}} {{featuredDeal.merchant.rebate.currency}}
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

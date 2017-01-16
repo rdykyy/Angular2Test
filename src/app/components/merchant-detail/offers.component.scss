@@ -1,0 +1,31 @@
+.offer {
+  width: 50%;
+  height: 100px;
+  float: left;
+  padding: 0 10px;
+  margin: 10px 0;
+
+  .offerWrap {
+    padding: 10px;
+    border: 1px solid grey;
+    height: 100%;
+    position: relative;
+  }
+
+  .expirationDate {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+  }
+}
