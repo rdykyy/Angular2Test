@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Cookie } from 'ng2-cookies/ng2-cookies';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @Injectable()
 export class AuthService {
   private loggedIn = false;
 
-  constructor() {
-    this.loggedIn = !!Cookie.get('loggedIn');
+  constructor(private cookie: CookieService) {
+    this.loggedIn = this.cookie.get('loggedIn') === '1';
   }
 
   login() {
-    Cookie.set('loggedIn', '1');
+    this.cookie.put('loggedIn', '1');
     this.loggedIn = true;
   }
 
   logout() {
-    Cookie.delete('loggedIn');
+    this.cookie.remove('loggedIn');
     this.loggedIn = false;
   }
 

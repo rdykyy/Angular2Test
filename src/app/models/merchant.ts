@@ -1,16 +1,47 @@
+import Rebate from './rebate';
+
 export class Merchant {
     id: number;
-    categories: Object;
+    categories: Category[];
     clickUrl: string;
     description: string;
     disclaimer: string;
-    flags: Object;
+    flags: Flags;
     isFeatured: boolean;
-    logoUrls: Object;
+    logoUrls: LogoUrls;
     merchantId: number;
     name: string;
-    offers: Object;
+    offers: Offer[];
     offersCount: number;
-    rebate: Object;
+    rebate: Rebate;
     showRebate: boolean;
 }
+
+class Category {
+    id: string;
+    name: string;
+}
+
+class Flags {
+    instorePickupAvailable: boolean;
+    tracksMobile: boolean;
+    tracksTablet: boolean;
+    tracksThirdParty: boolean;
+}
+
+class LogoUrls {
+    _88x31: string;
+    _120x60: string;
+}
+
+class Offer {
+    clickUrl: string;
+    code: string;
+    contentGroups: string;
+    description: string;
+    disclaimer: string;
+    expires: string;
+    id: string;
+    startDatetime: string;
+}
+
